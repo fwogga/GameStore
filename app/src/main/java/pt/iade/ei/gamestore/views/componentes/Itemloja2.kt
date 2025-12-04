@@ -10,8 +10,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import pt.iade.ei.gamestore.model.Item
+import pt.iade.ei.gamestore.model.ServidorFake
+import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 
 @Composable
 fun Itemdaloja2(
@@ -56,5 +59,18 @@ fun Itemdaloja2(
                 Text(text = "Buy with 1-click")
             }
         }
+    }
+}
+@Preview(showBackground = true)
+@Composable
+fun Itemdaloja2Preview() {
+    val game = ServidorFake.getGames().first()
+    val item = game.items.first()
+
+    GameStoreTheme {
+        Itemdaloja2(
+            item = item,
+            onBuyClick = {}
+        )
     }
 }
