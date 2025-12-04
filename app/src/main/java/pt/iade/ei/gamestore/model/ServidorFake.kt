@@ -4,7 +4,7 @@ import pt.iade.ei.gamestore.R
 
 object ServidorFake {
 
-    val jogos: List<jogo> by lazy {
+    val jogos:List<jogo> by lazy{
         listOf(
             jogo(
                 id = "j1",
@@ -88,5 +88,5 @@ object ServidorFake {
         )
     }
 
-    fun getGames(): List<jogo> = jogos
+    fun getGames():List<jogo> = jogos
 }

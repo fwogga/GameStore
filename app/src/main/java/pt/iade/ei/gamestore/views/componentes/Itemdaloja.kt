@@ -20,7 +20,7 @@ import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 
 @Composable
 fun Itemdaloja(
-    item: Item,
+    item:Item,
     modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
@@ -28,7 +28,7 @@ fun Itemdaloja(
         modifier = modifier
             .fillMaxWidth()
             .padding(vertical = 4.dp)
-            .clickable { onClick() },
+            .clickable {onClick() },
         shape = RoundedCornerShape(0.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.background

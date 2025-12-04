@@ -21,9 +21,9 @@ import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 
 @Composable
 fun GameCard(
-    game: jogo,
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit
+    game:jogo,
+    modifier:Modifier = Modifier,
+    onClick:() -> Unit
 ) {
     Card(
         modifier = modifier
@@ -61,7 +61,7 @@ fun GameCardPreview() {
     val game = ServidorFake.getGames().first()
 
     GameStoreTheme {
-        GameCard(game = game, onClick = {})
+        GameCard(game = game,onClick = {})
     }
 }
 

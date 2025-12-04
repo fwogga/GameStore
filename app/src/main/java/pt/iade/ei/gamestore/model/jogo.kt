@@ -8,4 +8,4 @@ data class jogo(
     val description: String,
     val imageResId: Int,
     val items: List<Item>
-) : Serializable
+):Serializable

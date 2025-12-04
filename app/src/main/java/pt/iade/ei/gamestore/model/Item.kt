@@ -8,5 +8,5 @@ data class Item(
     val description: String,
     val price: Double,
     val imageResId: Int
-) : Serializable
+):Serializable
 

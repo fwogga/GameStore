@@ -39,7 +39,7 @@ class GameDetailActivity : ComponentActivity() {
             GameStoreTheme {
                 GameDetailScreen(
                     game = game,
-                    onBackClick = { finish() }
+                    onBackClick = {finish()}
                 )
             }
         }
@@ -53,14 +53,14 @@ fun GameDetailScreen(
     onBackClick: () -> Unit
 ) {
     val context = LocalContext.current
-    var selectedItem by remember { mutableStateOf<Item?>(null) }
+    var selectedItem by remember {mutableStateOf<Item?>(null)}
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val scope = rememberCoroutineScope()
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = game.name) },
+                title = {Text(text = game.name)},
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back")
@@ -121,7 +121,7 @@ fun GameDetailScreen(
                 }
 
 
-                items(game.items) { item ->
+                items(game.items){item ->
                     Itemdaloja(
                         item = item,
                         onClick = {

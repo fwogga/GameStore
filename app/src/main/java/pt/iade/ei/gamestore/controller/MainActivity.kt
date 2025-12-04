@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
             GameStoreTheme {
                 GameStoreHome(
                     games = games,
-                    onGameClick = { game ->
+                    onGameClick = {game ->
                         val intent = Intent(this, GameDetailActivity::class.java)
                         intent.putExtra("game", game)
                         startActivity(intent)
@@ -51,7 +51,7 @@ fun GameStoreHome(
     games: List<jogo>,
     onGameClick: (jogo) -> Unit
 ) {
-    var selectedBottomItem by remember { mutableStateOf(0) }
+    var selectedBottomItem by remember {mutableStateOf(0)}
 
     Scaffold(
         topBar = {
@@ -60,13 +60,13 @@ fun GameStoreHome(
                     Text(text = "Evil Store")
                 },
                 actions = {
-                    IconButton(onClick = {}) {
+                    IconButton(onClick ={}){
                         Icon(
                             imageVector = Icons.Default.Search,
                             contentDescription = "Search"
                         )
                     }
-                    IconButton(onClick = {}) {
+                    IconButton(onClick ={}){
                         Icon(
                             imageVector = Icons.Default.Notifications,
                             contentDescription = "Notifications"
@@ -80,9 +80,9 @@ fun GameStoreHome(
             NavigationBar {
                 NavigationBarItem(
                     selected = selectedBottomItem == 0,
-                    onClick = { selectedBottomItem = 0 },
-                    icon = { Icon(Icons.Default.Star, contentDescription = "Featured") },
-                    label = { Text("Featured") }
+                    onClick = {selectedBottomItem = 0},
+                    icon = {Icon(Icons.Default.Star, contentDescription = "Featured")},
+                    label = {Text("Featured")}
                 )
                 NavigationBarItem(
                     selected = selectedBottomItem == 1,
@@ -93,13 +93,13 @@ fun GameStoreHome(
                         tint = MaterialTheme.colorScheme.onSurface
                     )
                     },
-                    label = { Text("History") }
+                    label = {Text("History")}
                 )
                 NavigationBarItem(
                     selected = selectedBottomItem == 2,
-                    onClick = { selectedBottomItem = 2 },
-                    icon = { Icon(Icons.Default.Person, contentDescription = "Profile") },
-                    label = { Text("Profile") }
+                    onClick = {selectedBottomItem = 2},
+                    icon = {Icon(Icons.Default.Person, contentDescription = "Profile")},
+                    label = {Text("Profile")}
                 )
             }
         }
@@ -127,10 +127,10 @@ private fun GameListContent(
             end = 16.dp
         )
     ) {
-        items(games) { game ->
+        items(games) {game ->
             GameCard(
                 game = game,
-                onClick = { onGameClick(game) }
+                onClick = {onGameClick(game)}
             )
         }
     }
