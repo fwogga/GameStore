@@ -134,3 +134,16 @@ private fun GameListContent(
         }
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun GameStoreHomePreview() {
+    val games = ServidorFake.getGames()
+
+    GameStoreTheme {
+        GameStoreHome(
+            games = games,
+            onGameClick = {}
+        )
+    }
+}
